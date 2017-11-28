@@ -1,0 +1,24 @@
+.button-work {
+    display: flex;
+    align-items: center;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: $red;
+    border: 5px solid $red;
+    padding: 15px 30px;
+    &:hover {
+        background: transparentize($red, 0.8);
+    }
+    .arrow-right:after {
+        margin-left: 10px;
+        margin-top: 5px;
+        content: '';
+        background: url('/src/img/right.svg');
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        fill: $red;
+    }
+}

@@ -4,6 +4,7 @@
   "description": "perosnal portfolio website of adam thompson",
   "main": "webpack.config.js",
   "dependencies": {
+    "bourbon-neat": "^1.9.0",
     "pug": "^2.0.0-rc.4",
     "webpack": "^3.8.1"
   },

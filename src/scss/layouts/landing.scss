@@ -1,0 +1,57 @@
+body {
+    height: 200vh;
+    background: $black;
+}
+.landing .main {
+    height: 80vh;
+    padding-left: 160px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: $black;
+    font-family: 'Bungee', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.landing .header {
+    max-width: 600px;
+    & .title {
+        font-size: 144px;
+        text-shadow: -15px 10px 0 $blue;
+        color: $egg;
+    }
+}
+
+.landing .trailer {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: $egg;
+    display: flex;
+    flex-direction: row;
+    .highlight {
+        padding: 45px 5px 0px 145px;
+    }
+    .underline {
+        padding: 45px 0px 0px 25px;
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: $red;
+        }
+    }
+}
+
+.landing .action {
+    display: flex;
+    &.centered {
+        justify-content: center;
+    }
+}
+
+#pt {
+    margin-left: -160px;
+}
