@@ -1,34 +1,31 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const neat = require('bourbon-neat').includePaths;
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+
+const isProd = process.env.NODE_ENV === 'production';
+
+const cssDev = ['style-loader','css-loader?sourceMap','sass-loader'];
+const cssProd = ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: ['css-loader','sass-loader']
+});
+
+const cssConfig = isProd ? cssProd : cssDev;
 
 module.exports = {
-	entry: './src/js/app.js',
+	entry: {
+        app: './src/js/app.js'
+    },
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: 'bundle.js'
+		filename: 'js/[name].bundle.js'
 	},
     module: {
         rules: [
             {
                 test: /\.scss$/, 
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader'
-                        },
-                        {
-                            loader: 'sass-loader', 
-                            options: {
-                                includePaths:[
-                                    neat
-                                ]
-                            }
-                        }
-                    ]
-                })
+                use: cssConfig
             },
             {
                 test: /\.pug/,
@@ -57,10 +54,16 @@ module.exports = {
             hash: true,
             template: './src/index.pug'
         }),
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin({
+            filename: '/css/[name].css',
+            disable: !isProd,
+            allChunks: true
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
-        open: true
+        open: true,
+        hot: true
     }
 };
