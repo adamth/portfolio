@@ -1,7 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const neat = require('bourbon-neat').includePaths
+const neat = require('bourbon-neat').includePaths;
 
 module.exports = {
 	entry: './src/js/app.js',
@@ -33,6 +33,21 @@ module.exports = {
             {
                 test: /\.pug/,
                 use:['html-loader','pug-html-loader']
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'images/'
+                            }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                    },
+                  ]
             }
         ]
     },
@@ -45,6 +60,7 @@ module.exports = {
         new ExtractTextPlugin('style.css')
     ],
     devServer: {
+        contentBase: path.join(__dirname, 'dist'),
         open: true
     }
 };
