@@ -1,0 +1,157 @@
+.about {
+    font-family: 'Syncopate', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $egg;
+    padding-top: 20px;
+    & .heading {
+        color: $red;
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.key-items {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .icon {
+        height: 105px;
+    }
+    & .title {
+        color: $red;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    & .text {
+        color: $grey;
+    }
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px;
+    padding-left: 60px;
+    margin-top: 100px;
+    & .image img {
+        height: 250px;
+        border-radius: 200px;
+    }
+    & .text {
+        text-align: center;
+        color: $grey;
+    }
+}
+
+.skills {
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    height: 300px;;
+    width: 800px;
+    & .body {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    & .markers {
+        height: 100%;
+        border-right: solid 3px $grey;
+        & .marker {
+            text-align: right;
+            height: 20%;
+            &:first-child {
+                margin-top: -5px;
+            }
+            &:after {
+                margin-right: -3px;
+                margin-top: 5px;
+                float: right;
+                content: '';
+                display: block;
+                width: 10px;
+                height: 4px;
+                background: $grey;
+            }
+        }
+    }
+    & .bars {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+    }
+    & .bar {
+        width: 12%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        & .fill {
+            width: 100%;
+            background: $red;
+            &.zero {
+            height: 1%
+            }
+            &.twenty {
+                height: 20%;
+            }
+            &.forty {
+                height: 40%;
+            }
+            &.sixty {
+                height: 60%;
+            }
+            &.eighty {
+                height: 80%;
+            }
+            &.hundred {
+                height: 100%;
+            }
+        }
+        height: 100%;
+    }
+    .labels {
+        font-size: 14px;
+        color: $grey;
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 55px;
+        margin-right: 20px;
+        & .label {
+            width: 20%;
+        }
+    }
+}

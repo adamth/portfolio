@@ -1,0 +1,17 @@
+
+<svg width="62px" height="56px" viewBox="0 0 62 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-539.000000, -201.000000)">
+            <g id="Group" transform="translate(134.000000, 165.000000)">
+                <g id="Stars" transform="translate(405.000000, 36.000000)">
+                    <polygon id="Star" fill="#DE5E38" points="14.5 37.217029 5.53850716 42 7.25 31.8695048 1.17683641e-14 24.6950483 10.0192536 23.217029 14.5 14 18.9807464 23.217029 29 24.6950483 21.75 31.8695048 23.4614928 42"></polygon>
+                    <polygon id="Star" fill="#598F91" points="47 51.0462086 37.7294902 56 39.5 45.5077014 32 38.0770143 42.3647451 36.5462086 47 27 51.6352549 36.5462086 62 38.0770143 54.5 45.5077014 56.2705098 56"></polygon>
+                    <polygon id="Star" fill="#598F91" points="38.5 14.25 32.9160401 17.1856614 33.9824815 10.9678307 29.4649631 6.56433855 35.7080201 5.65716928 38.5 0 41.2919799 5.65716928 47.5350369 6.56433855 43.0175185 10.9678307 44.0839599 17.1856614"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

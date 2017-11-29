@@ -1,0 +1,19 @@
+
+<svg width="72px" height="75px" viewBox="0 0 72 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-868.000000, -192.000000)">
+            <g id="Group" transform="translate(134.000000, 165.000000)">
+                <g id="Solar-System" transform="translate(734.000000, 27.000000)">
+                    <rect id="Rectangle-2" stroke="#727272" stroke-width="2" x="1" y="4" width="70" height="70" rx="35"></rect>
+                    <rect id="Rectangle-2" stroke="#727272" stroke-width="2" x="12" y="15" width="48" height="48" rx="24"></rect>
+                    <rect id="Rectangle-2" fill="#FEE382" x="25" y="29" width="22" height="21" rx="10.5"></rect>
+                    <rect id="Rectangle-2" fill="#DE5E38" x="36" y="0" width="11" height="11" rx="5.5"></rect>
+                    <rect id="Rectangle-2" fill="#598F91" x="51" y="45" width="11" height="11" rx="5.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

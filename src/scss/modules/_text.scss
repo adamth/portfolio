@@ -31,12 +31,22 @@
     padding-bottom: 5px;
 }
 
-.underline {
+.underline--thick {
     &:after {
         content: '';
         display: block;
         width: 100%;
         height: 5px;
+        background: $red;
+    }
+}
+
+.underline--thin {
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
         background: $red;
     }
 }

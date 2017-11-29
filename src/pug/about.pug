@@ -1,0 +1,49 @@
+include mixins/key-item.pug
+section.about
+    .heading.underline--thin About
+    .key-items
+        +key-item('img/rocket.svg', 'Fast', 'Some text')
+        +key-item('img/stars.svg', 'Responsive', 'Some text')
+        +key-item('img/solar.svg', 'Modern', 'Some text')
+        +key-item('img/planet.svg', 'Secure', 'Some text')
+    .details
+        .profile
+            .image
+                img(src='img/me.jpg')
+            .text
+                p.
+                    I am a system analyst for
+                    Mind Australia in Melbourne, AU.
+                p.
+                    Deeply Curious, committed and 
+                    passionate about good UI,
+                    responsive design and secure
+                    back ends. 
+        .skills
+            .chart
+                .body
+                    .markers
+                        .marker 100%
+                        .marker 80%
+                        .marker 60%
+                        .marker 40%
+                        .marker 20%
+                        .marker 0%
+                    .bars
+                        .bar
+                            .fill.twenty                 
+                        .bar
+                            .fill.forty
+                        .bar
+                            .fill.hundred 
+                        .bar
+                            .fill.sixty
+                        .bar
+                            .fill.eighty
+                .labels
+                    .label Node
+                    .label React/Redux
+                    .label CSS/SASS
+                    .label Karma
+                    .label SQL
+    
