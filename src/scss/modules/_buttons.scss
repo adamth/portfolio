@@ -1,4 +1,5 @@
 .button-work {
+    cursor: pointer;
     display: flex;
     align-items: center;
     font-family: 'Syncopate', sans-serif;
@@ -22,15 +23,9 @@
     &:hover {
         background: transparentize($red, 0.8);
     }
-    .arrow-right:after {
-        margin-left: 10px;
-        margin-top: 5px;
-        content: '';
-        background: url('/src/img/right.svg');
-        background-size: cover;
-        height: 20px;
+    .arrow-right img {
         width: 20px;
-        display: inline-block;
-        fill: $red;
+        vertical-align: middle;
+        margin-left: 15px;
     }
 }
