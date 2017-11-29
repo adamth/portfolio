@@ -7,6 +7,18 @@
     color: $red;
     border: 5px solid $red;
     padding: 15px 30px;
+    @media(max-width: $small) {
+        font-size: 17px;
+        padding: 10px 30px;
+    }
+    @media screen and (max-width: $small) {
+        font-size: 17px;
+        padding: 10px 30px;
+    }
+    @media (max-height: $h-small) {
+        font-size: 17px;
+        padding: 8px 30px;
+    }
     &:hover {
         background: transparentize($red, 0.8);
     }

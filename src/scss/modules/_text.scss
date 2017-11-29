@@ -1,11 +1,52 @@
-.highlight {
+.highlight-container {
     background: $red;
-    .left {
-        text-align: left;
+    display: flex;
+    align-items: flex-end;
+    width: 380px;
+    height: 90px;
+    @media (max-height: $h-small) {
+        width: 70%;
+        height: 40px;
     }
-    .right {
-        text-align: right;
+}
+
+.underline-container {
+    margin-left: 15px;
+    @media(max-width:$medium) {
+        margin-left: 5px;
     }
+    display: flex;
+    align-items: flex-end;
+    width: 400px;
+    height: 90px;
+    @media (max-height: $h-small) {
+        height: 40px;
+    }
+}
+
+.highlight {
+    width: 100%;
+    background: $red;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.underline {
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: $red;
+    }
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
 }
 
 .underline {
