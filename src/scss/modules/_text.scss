@@ -50,6 +50,15 @@
         background: $red;
     }
 }
+.underline--thin.blue {
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $blue;
+    }
+}
 
 .heading {
     color: $red;
@@ -58,6 +67,10 @@
     margin-bottom: 80px;
     @media screen and (max-width: $medium){
         margin-bottom: 30px;
+    }
+
+    &.blue {
+        color: $blue;
     }
 }
 
