@@ -1,0 +1,8 @@
+mixin bar(text, icon, percentage)
+    .bar
+        .body
+            .fill(class=percentage)
+        .label
+            .icon
+                img(src=icon)
+            .text=text

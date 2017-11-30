@@ -1,5 +1,5 @@
 body {
-    height: 200vh;
+    font-family: 'Syncopate', sans-serif;
     background: $black;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,12 @@ body {
         display: block;
     }
 }
+
+section.landing {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .landing .main {
     height: 80vh;
     max-width: 800px;
@@ -31,6 +37,7 @@ body {
         font-size: 120px;
         @media(max-width: $medium) {
             font-size: 15vw;
+            text-shadow: -7px 10px 0 $blue;
         }   
         @media (max-height: $h-small) {
             font-size: 11vw;

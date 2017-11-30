@@ -1,0 +1,84 @@
+.work {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $offwhite;
+}
+
+.work-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    & .images {
+        position: relative;
+        &#sosme {
+            margin: 20px 0 0 75px;
+            @media screen and (max-width: $medium){
+                margin: 20px 0 0 30px;
+            }
+        }
+        
+        & #sosme-phone {
+            @media screen and (max-width: $medium){
+                left: -45px;
+                top: 10px;
+                max-height: 50vw;
+            }
+            position: absolute;
+            top: 100px;
+            left: -100px;
+            max-height: 530px;
+        }
+        & #sosme-landing {
+            @media screen and (max-width: $medium){
+                left: -45px;
+                top: 10px;
+                max-width: 75vw;
+                margin-bottom: 30px;
+            }
+            max-width: 70vw;
+            box-shadow: 0 4px 4px 0 rgba(0,0,0,0.50);
+            margin-bottom: 100px;
+        }
+        
+        & .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1005px;
+            & img {
+                width: 30%;
+                height: 30%;
+            }
+        }
+    }
+
+    & .title {
+        color: $red;
+        line-height: 35px;
+        display: flex;
+        @media screen and (max-width: $medium){
+            flex-direction: column;
+            align-items: center;
+        }
+        & .logos {
+            display: flex;
+            flex-direction: row;
+            & .logo {
+                & img {
+                    height: 35px;
+                    margin-left: 20px;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,25 +1,20 @@
 .about {
-    font-family: 'Syncopate', sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: $egg;
     padding-top: 20px;
-    & .heading {
-        color: $red;
-        font-size: 36px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-    }
 }
 
 .key-items {
     width: 100%;
     margin-bottom: 40px;
-    padding: 0px 60px;
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: $medium){
+        flex-direction: column;
+    }
     justify-content: space-around;
     align-items: center;
 }
@@ -48,7 +43,10 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    @media screen and (max-width: $medium){
+        flex-direction: column;
+    }
+    align-items: stretch;
     justify-content: space-around;
 }
 
@@ -59,8 +57,7 @@
     justify-content: center;
     align-items: center;
     max-width: 420px;
-    padding-left: 60px;
-    margin-top: 100px;
+    padding: 30px;
     & .image img {
         height: 250px;
         border-radius: 200px;
@@ -72,86 +69,88 @@
 }
 
 .skills {
+    flex-grow: 2;
+    padding: 30px;
 }
 
 .chart {
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: $medium){
+        min-height: 200px;
+    }
     display: flex;
-    flex-direction: column;
-    height: 300px;;
-    width: 800px;
-    & .body {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    & .markers {
-        height: 100%;
-        border-right: solid 3px $grey;
-        & .marker {
-            text-align: right;
-            height: 20%;
-            &:first-child {
-                margin-top: -5px;
-            }
-            &:after {
-                margin-right: -3px;
-                margin-top: 5px;
-                float: right;
-                content: '';
-                display: block;
-                width: 10px;
-                height: 4px;
-                background: $grey;
-            }
-        }
-    }
-    & .bars {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 90%;
-    }
+    flex-direction: row;
     & .bar {
-        width: 12%;
-        height: 100%;
         display: flex;
-        align-items: flex-end;
-        & .fill {
-            width: 100%;
-            background: $red;
-            &.zero {
-            height: 1%
+        flex-direction: column;
+        flex-grow: 1;
+        & .body {
+            padding-left: 10px;
+            padding-right: 10px; 
+            height: 75%;
+            display: flex;
+            flex-direction: column-reverse;
+            & .fill {
+                background: $red;
             }
-            &.twenty {
-                height: 20%;
+            & .twenty {
+                flex-grow: 0.2;
             }
-            &.forty {
-                height: 40%;
+            & .forty {
+                flex-grow: 0.4;
             }
-            &.sixty {
-                height: 60%;
+            & .sixty {
+                flex-grow: 0.6;
             }
-            &.eighty {
-                height: 80%;
+            & .seventy {
+                flex-grow: 0.7;
             }
-            &.hundred {
-                height: 100%;
+            & .eighty {
+                flex-grow: 0.8;
+            }
+            & .ninty {
+                flex-grow: 0.9;
+            }
+            & .hundred {
+                flex-grow: 1;
+            }
+            & .marker {
+                text-align: right;
+                flex-grow: 1;
+                &:after {
+                    margin-right: -3px;
+                    margin-top: 5px;
+                    float: right;
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 2px;
+                    background: $grey;
+                }
             }
         }
-        height: 100%;
-    }
-    .labels {
-        font-size: 14px;
-        color: $grey;
-        text-align: center;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-left: 55px;
-        margin-right: 20px;
+        & .body.axis {
+            height: 88%;
+            font-size: 12px;
+            @media screen and (max-width: $medium){
+                font-size: 10px;
+            }
+        }
+        & .icon img {
+            width: 50px;
+            height: 80px;
+            @media screen and (max-width: $medium){
+                padding: 0px 10px;
+                width: 30px;
+                height: 50px;
+            }
+        }
+
         & .label {
-            width: 20%;
+            height: 25%;
+            text-align: center;
+            font-size: 10px;
         }
     }
 }

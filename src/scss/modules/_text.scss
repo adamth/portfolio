@@ -51,14 +51,20 @@
     }
 }
 
+.heading {
+    color: $red;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    @media screen and (max-width: $medium){
+        margin-bottom: 30px;
+    }
+}
+
 .right {
     text-align: right;
 }
 
 .left {
     text-align: left;
-}
-
-.underline {
-
 }

@@ -1,4 +1,5 @@
 include mixins/key-item.pug
+include mixins/bar.pug
 section.about
     .heading.underline--thin About
     .key-items
@@ -21,29 +22,19 @@ section.about
                     back ends. 
         .skills
             .chart
-                .body
-                    .markers
-                        .marker 100%
-                        .marker 80%
-                        .marker 60%
-                        .marker 40%
-                        .marker 20%
-                        .marker 0%
-                    .bars
-                        .bar
-                            .fill.twenty                 
-                        .bar
-                            .fill.forty
-                        .bar
-                            .fill.hundred 
-                        .bar
-                            .fill.sixty
-                        .bar
-                            .fill.eighty
-                .labels
-                    .label Node
-                    .label React/Redux
-                    .label CSS/SASS
-                    .label Karma
-                    .label SQL
+                .bar
+                    .body.axis
+                        .marker 0% 
+                        .marker 20% 
+                        .marker 40% 
+                        .marker 60% 
+                        .marker 80% 
+                        .marker 100% 
+                +bar('Node', 'img/node.svg', 'seventy')
+                +bar('React', 'img/react.svg', 'ninty')
+                +bar('Redux', 'img/redux.svg', 'seventy')
+                +bar('Sass', 'img/sass.svg', 'eighty')
+                +bar('Karma', 'img/karma.svg', 'forty')
+                
+
     
