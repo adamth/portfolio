@@ -4,6 +4,7 @@
   "description": "perosnal portfolio website of adam thompson",
   "main": "webpack.config.js",
   "dependencies": {
+    "jquery": "^3.2.1",
     "webpack": "^3.8.1"
   },
   "devDependencies": {

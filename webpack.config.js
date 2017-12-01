@@ -59,7 +59,11 @@ module.exports = {
             disable: !isProd,
             allChunks: true
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
