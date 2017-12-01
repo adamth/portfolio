@@ -9,6 +9,7 @@
 .networks {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
     & .image {
         display: flex;
         justify-content: space-around;
@@ -16,6 +17,54 @@
         & img {
             width: 60%;
             height: 100%;
+        }
+    }
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    @media(max-width: $medium) {
+        margin-top: 50px;
+    }
+    & .title {
+        font-weight: bold;
+        color: $blue;
+        margin-bottom: 40px;
+    }
+    & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & input, textarea {
+            &::-webkit-input-placeholder {
+                color: $blue;
+            }
+            background: 0;
+            border: 1px solid $blue;
+            color: $blue;
+            font-family: inherit;
+            margin-bottom: 15px;
+            width: 550px;
+            @media(max-width: $medium) {
+                width: 80vw;
+            }
+            font-size: 20px;
+            padding: 20px;
+        }
+        & button {
+            background: 0;
+            border: 1px solid $blue;
+            border-radius: 0px;
+            font-family: inherit;
+            color: $blue;
+            padding: 17px;
+            width: 110px;
+            align-self: flex-end;
         }
     }
 }
