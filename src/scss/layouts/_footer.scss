@@ -1,0 +1,23 @@
+.footer {
+    color: $offwhite;
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    justify-content: center;
+    @media(max-width: $medium) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    & .text {
+        height: 100%;
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+    .copyrite {
+        padding-bottom: 0px !important; 
+        display: flex;
+        align-items: flex-end;
+        width: 130px;
+        height: 35px;
+    }
+}
