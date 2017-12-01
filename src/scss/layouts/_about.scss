@@ -12,9 +12,7 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    @media screen and (max-width: $medium){
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -25,8 +23,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: $medium){
+        font-size: 15px;
+        margin: 20px 0;
+        width: 50%;
+    }
     & .icon {
         height: 105px;
+        @media screen and (max-width: $medium){
+            height: 70px;
+        }
+        & img {
+            @media screen and (max-width: $medium){
+                height: 50px;
+                width: 50px;
+            }
+        }
     }
     & .title {
         color: $red;
@@ -65,6 +77,9 @@
     & .text {
         text-align: center;
         color: $grey;
+        line-height: 25px;
+        letter-spacing: 1px;
+        font-size: 12px;
     }
 }
 
