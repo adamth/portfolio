@@ -32,6 +32,7 @@
                 top: 10px;
                 max-height: 50vw;
             }
+            visibility: hidden;
             position: absolute;
             top: 100px;
             left: -100px;
@@ -55,9 +56,15 @@
             flex-wrap: wrap;
             justify-content: center;
             max-width: 1005px;
+            
             & img {
+                visibility: hidden;
                 width: 30%;
                 height: 30%;
+                transition: all 200ms ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
         }
     }

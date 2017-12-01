@@ -14,6 +14,20 @@
         display: flex;
         justify-content: space-around;
         width: 20vw;
+        &:hover {
+            animation: networks 500ms infinite;
+        }
+        @keyframes networks {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         & img {
             width: 60%;
             height: 100%;
@@ -66,5 +80,8 @@
             width: 110px;
             align-self: flex-end;
         }
+    }
+    & a {
+        color: $red;
     }
 }
