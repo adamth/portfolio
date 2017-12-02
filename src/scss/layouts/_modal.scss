@@ -1,0 +1,46 @@
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $red;
+    & .close {
+        cursor: pointer;
+        align-self: flex-end;
+        padding: 10px;
+        @media screen and (max-width: $medium){
+            widows: 30px;
+        }
+    }
+    & .images {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    & .modal-image {
+        display: none;
+        & img {
+            max-height: 70vh;
+            max-width: 75vw;
+        }
+    }
+
+    & .right {
+        cursor: pointer;
+        margin-left: 15px; 
+    }
+    & .left {
+        cursor: pointer;
+        margin-right: 15px; 
+    }
+    & .text {
+        text-align: center;
+        color: $offwhite;
+        margin-top: 15px;
+    }
+}

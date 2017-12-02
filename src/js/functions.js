@@ -1,5 +1,3 @@
-import { setInterval } from "timers";
-
 // Function to test if an element is in the viewport
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
@@ -69,3 +67,86 @@ $('.button-work').click(function() {
         scrollTop: $('.work').offset().top
     },'slow');
 });
+
+// Modal
+let currentImage = 1;
+let modalOpen = false;
+
+$('.close').on('click', function() {
+    closeModal();
+});
+
+$('.grid-image').on('click', function() {
+    const id = $(this).attr('id');
+    setImage(id);
+    openModal();
+});
+
+function setImage(n) {
+    currentImage = n;
+    openModal();
+}
+
+function changeImage(n) {
+    currentImage = parseInt(currentImage) + n;
+    openModal();
+}
+
+function closeModal() {
+    modalOpen = false;
+    $('.modal').css('display', 'none');
+    $('.modal').removeClass('show');
+}
+
+function openModal() {
+    modalOpen = true;
+    const images = document.querySelectorAll('.modal-image');
+    for(let i = 0; i < images.length; i++) {
+        $(images[i]).hide();
+    }
+    $(images[currentImage - 1]).show();
+    $('.modal').css('display', 'flex');
+    $('.modal').addClass('show');
+}
+
+$('.left').on('click', function() {
+    left();
+});
+
+$('.right').on('click', function() {
+    right();
+});
+
+function right() {
+    if(parseInt(currentImage) + 1 > document.querySelectorAll('.modal-image').length) {
+        return setImage(1);
+    }
+    changeImage(1);
+}
+
+function left() {
+    if(parseInt(currentImage) - 1 <= 0) {
+        return setImage(document.querySelectorAll('.modal-image').length);
+    }
+    changeImage(-1);
+}
+
+$(document).bind('keydown', function(e) {
+    if(modalOpen) {
+        switch (e.which) {
+            case 37: // left
+                left();
+            break;
+    
+            case 39: // right
+                right();
+            break;
+
+            case 27: // exit
+                closeModal();
+            break;
+        }
+    }
+    
+    console.log(e.which);
+  });

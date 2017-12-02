@@ -126,6 +126,7 @@
             flex-direction: column-reverse;
 
             & .fill {
+                backface-visibility: hidden;
                 visibility: hidden;
                 background: $red;
             }

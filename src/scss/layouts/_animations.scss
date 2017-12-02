@@ -100,3 +100,17 @@
 		  transform: scaleY(1);
 	  }
   }
+
+  .show {
+	animation-name: grow;
+	animation-duration: 500ms;
+  }
+  
+  @keyframes grow {
+	  0% {
+		  transform: scaleY(0);
+	  }		
+	  100% {
+		  transform: scaleY(1);
+	  }
+  }

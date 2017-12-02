@@ -1,0 +1,17 @@
+include mixins/image.pug
+
+.modal
+    .close
+        img(src='img/close.svg', alt='close')
+    .content
+        .images
+            img(src='img/left-arrow.svg', alt='left arrow').left
+            .image
+                +image('img/servicedesk-full.png', 'Information about image')
+                +image('img/hr-full.png', 'Information about image')
+                +image('img/sqar-full.png', 'Information about image')
+                +image('img/incident-full.png', 'Information about image')
+                +image('img/sog-full.png', 'Information about image')
+                +image('img/servicereg-full.png', 'Information about image')
+            img(src='img/right-arrow.svg', alt='right arrow').right
+        .decription
