@@ -45,6 +45,11 @@ module.exports = {
                         loader: 'image-webpack-loader',
                     },
                   ]
+            },
+            {
+                test: /\.js$/,
+                exclude: '/node_modules/',
+                use: 'babel-loader'
             }
         ]
     },
