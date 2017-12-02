@@ -1,3 +1,5 @@
+import { setInterval } from "timers";
+
 // Function to test if an element is in the viewport
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
@@ -18,12 +20,22 @@ $(window).on('scroll', function() {
     const grid = $('.grid');
 
     if(chart.isInViewport()) {
-        $('.fill').each(function(i) {
-            const fill = this;
+        const fills = document.querySelectorAll('.fill');
+        for(let i = 0; i < fills.length; i++) {
+            const fill = fills[i];
             setInterval(function() {
                 $(fill).removeClass('hidden');
-            }, i*200);
-        });
+            }, 800 + (200 * i));
+        }
+    }
+    if(keyItem.isInViewport()) {
+        const items = document.querySelectorAll('.item');
+        for(let i = 0; i < items.length; i++) {
+            const item = items[i];
+            setInterval(function() {
+                $(item).addClass('fadeIn');
+            }, 100 * i);   
+        }
     }
     if(sosmeLanding.isInViewport()) {
         sosmePhone.addClass('fadeUpIn');
@@ -34,15 +46,7 @@ $(window).on('scroll', function() {
     if(skills.isInViewport()) {
         skills.addClass('slideLeft');
     }
-    if(keyItem.isInViewport()) {
-        $('.item').each(function(i) {
-            const item = this;
-            setInterval(function(i) {
-                $(item).addClass('fadeIn');
-            }, i * 200);
-            
-        });
-    }
+    
     if(grid.isInViewport()) {
         grid.children().each(function(i) {
             const item = this;
