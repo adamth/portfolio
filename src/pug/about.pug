@@ -3,23 +3,21 @@ include mixins/bar.pug
 section.about
     .heading.underline--thin About
     .key-items
-        +key-item('img/rocket.svg', 'Fast', 'Some text')
-        +key-item('img/stars.svg', 'Responsive', 'Some text')
-        +key-item('img/solar.svg', 'Modern', 'Some text')
-        +key-item('img/planet.svg', 'Secure', 'Some text')
+        +key-item('img/rocket.svg', 'Fast', 'Tiny load times and smooth UIs are a top priority.')
+        +key-item('img/stars.svg', 'Responsive', 'Always mobile first, I make sure things look amazing on any device.')
+        +key-item('img/solar.svg', 'Modern', 'Use the latest tech to build experiences that users have come to expect.')
+        +key-item('img/planet.svg', 'Secure', 'Best practices on all my projects.')
     .details
         .profile
             .image
                 img(src='img/me.jpg')
             .text
                 p.
-                    I am a system analyst for
-                    Mind Australia in Melbourne, AU.
+                    System analyst at Mind Australia in Melbourne, AU.
                 p.
-                    Deeply Curious, committed and 
-                    passionate about good UI,
-                    responsive design and secure
-                    back ends. 
+                    Deeply curious personality with a passion for great UI, responsive design and system security. Strong background in SQL and reporting dashboards with a growing portfolio of modern, responsive web projects.
+                p.
+                    On the side I love to build drones, play with analogue photography and make things that move. Check out my #[a(href='https://www.instagram.com/adam_thomps/') instagram] to see some of my other projects!
         .skills
             .chart
                 .bar
@@ -31,10 +29,12 @@ section.about
                         .marker 80% 
                         .marker 100% 
                 +bar('Node', 'img/node.svg', 'seventy')
-                +bar('React', 'img/react.svg', 'ninty')
+                +bar('SQL', 'img/sql-server.svg', 'ninty')
+                +bar('Mongo DB', 'img/mongo.png', 'seventy')
+                +bar('React', 'img/react.svg', 'eighty')
                 +bar('Redux', 'img/redux.svg', 'seventy')
-                +bar('Sass', 'img/sass.svg', 'eighty')
-                +bar('Karma', 'img/karma.svg', 'forty')
+                +bar('Sass', 'img/sass.svg', 'sixty')
+                
                 
 
     

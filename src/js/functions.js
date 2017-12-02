@@ -24,7 +24,7 @@ $(window).on('scroll', function() {
         for(let i = 0; i < fills.length; i++) {
             const fill = fills[i];
             setInterval(function() {
-                $(fill).removeClass('hidden');
+                $(fill).addClass('grow');
             }, 800 + (200 * i));
         }
     }
@@ -37,6 +37,14 @@ $(window).on('scroll', function() {
             }, 100 * i);   
         }
     }
+    if(grid.isInViewport()) {
+        grid.children().each(function(i) {
+            const item = this;
+            setInterval(function(i) {
+                $(item).addClass('fadeUpIn');
+            }, i * 100);
+        });
+    }
     if(sosmeLanding.isInViewport()) {
         sosmePhone.addClass('fadeUpIn');
     }
@@ -45,16 +53,6 @@ $(window).on('scroll', function() {
     }
     if(skills.isInViewport()) {
         skills.addClass('slideLeft');
-    }
-    
-    if(grid.isInViewport()) {
-        grid.children().each(function(i) {
-            const item = this;
-            setInterval(function(i) {
-                $(item).addClass('fadeUpIn');
-            }, i * 100);
-            
-        });
     }
 });
 

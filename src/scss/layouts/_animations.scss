@@ -84,3 +84,19 @@
 		opacity: 1;	
 	}		
 }
+
+.grow {
+	visibility:  visible !important;
+	animation-name: grow;
+	animation-duration: 1s;
+	transform-origin: bottom;
+  }
+  
+  @keyframes grow {
+	  0% {
+		  transform: scaleY(0);
+	  }		
+	  100% {
+		  transform: scaleY(1);
+	  }
+  }
