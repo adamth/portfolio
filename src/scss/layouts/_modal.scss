@@ -12,9 +12,12 @@
         cursor: pointer;
         align-self: flex-end;
         padding: 10px;
-        @media screen and (max-width: $medium){
-            widows: 30px;
+        & img {
+            @media screen and (max-width: $medium){
+                width: 30px;
+            }
         }
+        
     }
     & .images {
         display: flex;
@@ -24,23 +27,44 @@
 
     & .modal-image {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         & img {
-            max-height: 70vh;
-            max-width: 75vw;
+            border-radius: 20px;
+            max-width: 80%;
         }
     }
 
     & .right {
         cursor: pointer;
-        margin-left: 15px; 
+        position: absolute;
+        top: 50vh;
+        right: 1%;
     }
     & .left {
         cursor: pointer;
-        margin-right: 15px; 
+        position: absolute;
+        top: 50vh;
+        left: 1%;
     }
     & .text {
+        max-width: 80%;
         text-align: center;
         color: $offwhite;
-        margin-top: 15px;
+        margin-top: 15px; 
+        line-height: 20px;
+        letter-spacing: 1px;
+        @media screen and (max-width: $medium){
+            font-size: 11px;
+        }
+    }
+
+    & .disclaimer {
+        font-size: 8px;
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        color: $egg;
     }
 }

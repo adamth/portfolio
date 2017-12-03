@@ -4,14 +4,13 @@ include mixins/image.pug
     .close
         img(src='img/close.svg', alt='close')
     .content
-        .images
+        +image('img/ict-mock.jpg', 'QlikView dashboard designed to provide critical information to the service desk team. Responsible for data extraction, UI and implementation.')
+        +image('img/hr-mock.jpg', 'QlikView dashboard designed to provide critical information to the human resources team. Responsible for data extraction, UI and implementation.')
+        +image('img/sqar-mock.jpg', 'QlikView dashboard designed to provide quarterly performance data to the board. Responsible for data extraction, UI and implementation.')
+        +image('img/incidents-mock.jpg', 'QlikView dashboard designed to display critical information. Responsible for data extraction, UI and implementation.')
+        +image('img/sog-mock.jpg', 'React/Redux based SPA designed to capture client signatures on a mobile device. Includes user login to organization domain, a live roster from client management system and database to securely store signatures. Responsible for concept, UI, database design and implementation.')
+        +image('img/servicereg-mock.jpg', 'ASP.Net based web application designed to allow staff to quickly find information about services offered by the organisation. Allows staff to add metadata about services to improve searching and filtering over time. Responsible for concept, UI, database design and implementation.')  
+    .controls   
             img(src='img/left-arrow.svg', alt='left arrow').left
-            .image
-                +image('img/servicedesk-full.png', 'Information about image')
-                +image('img/hr-full.png', 'Information about image')
-                +image('img/sqar-full.png', 'Information about image')
-                +image('img/incident-full.png', 'Information about image')
-                +image('img/sog-full.png', 'Information about image')
-                +image('img/servicereg-full.png', 'Information about image')
             img(src='img/right-arrow.svg', alt='right arrow').right
-        .decription
+    .disclaimer All images are for display purposes only and do not contain any real data. Provided with permission from Mind Australia.

@@ -21,7 +21,7 @@ $(window).on('scroll', function() {
         const fills = document.querySelectorAll('.fill');
         for(let i = 0; i < fills.length; i++) {
             const fill = fills[i];
-            setInterval(function() {
+            setTimeout(function() {
                 $(fill).addClass('grow');
             }, 800 + (200 * i));
         }
@@ -30,7 +30,7 @@ $(window).on('scroll', function() {
         const items = document.querySelectorAll('.item');
         for(let i = 0; i < items.length; i++) {
             const item = items[i];
-            setInterval(function() {
+            setTimeout(function() {
                 $(item).addClass('fadeIn');
             }, 100 * i);   
         }
@@ -38,7 +38,7 @@ $(window).on('scroll', function() {
     if(grid.isInViewport()) {
         grid.children().each(function(i) {
             const item = this;
-            setInterval(function(i) {
+            setTimeout(function(i) {
                 $(item).addClass('fadeUpIn');
             }, i * 100);
         });
@@ -69,6 +69,7 @@ $('.button-work').click(function() {
 });
 
 // Modal
+
 let currentImage = 1;
 let modalOpen = false;
 
@@ -94,28 +95,26 @@ function changeImage(n) {
 
 function closeModal() {
     modalOpen = false;
-    $('.modal').css('display', 'none');
-    $('.modal').removeClass('show');
+    $('.modal').addClass('hide');
+    setTimeout(function() {
+        $('.modal').css('display', 'none');
+        $('.modal').removeClass('show');
+        $('.modal').removeClass('hide');
+    }, 500);
 }
 
 function openModal() {
     modalOpen = true;
     const images = document.querySelectorAll('.modal-image');
     for(let i = 0; i < images.length; i++) {
-        $(images[i]).hide();
+        $(images[i]).css('display', 'none');
     }
-    $(images[currentImage - 1]).show();
+    $(images[currentImage - 1]).css('display', 'flex');
     $('.modal').css('display', 'flex');
     $('.modal').addClass('show');
 }
 
-$('.left').on('click', function() {
-    left();
-});
-
-$('.right').on('click', function() {
-    right();
-});
+// Key functions
 
 function right() {
     if(parseInt(currentImage) + 1 > document.querySelectorAll('.modal-image').length) {
@@ -130,6 +129,14 @@ function left() {
     }
     changeImage(-1);
 }
+
+$('.left').on('click', function() {
+    left();
+});
+
+$('.right').on('click', function() {
+    right();
+});
 
 $(document).bind('keydown', function(e) {
     if(modalOpen) {
@@ -147,6 +154,4 @@ $(document).bind('keydown', function(e) {
             break;
         }
     }
-    
-    console.log(e.which);
   });
