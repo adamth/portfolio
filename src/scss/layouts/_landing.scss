@@ -1,5 +1,5 @@
 body {
-    font-family: 'Syncopate', sans-serif;
+    font-family: 'Armata', sans-serif;
     background: $black;
     display: flex;
     flex-direction: column;
@@ -25,13 +25,13 @@ section.landing {
         padding-bottom: 20px;
     }
     background: $black;
-    font-family: 'Bungee', cursive;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .landing .header {
+    font-family: 'Bungee', cursive;
     & .title {
         padding: 0px 20px;
         font-size: 120px;
@@ -48,7 +48,6 @@ section.landing {
 }
 
 .landing .trailer {
-    font-family: 'Syncopate', sans-serif;
     font-size: 36px;
     @media(max-width:$small) {
         font-size: 7vw;
