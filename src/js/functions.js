@@ -138,6 +138,8 @@ $('.right').on('click', function() {
     right();
 });
 
+$('.copyrite').text(`© ${new Date().getFullYear()}`);
+
 $(document).bind('keydown', function(e) {
     if(modalOpen) {
         switch (e.which) {
